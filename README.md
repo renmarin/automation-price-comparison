@@ -5,11 +5,26 @@ Script looks for product name on Amazon and BestBuy; collects: names, review cou
 
 Sometimes it is not possible to retrieve data for the check counters and therefore script needs to be restarted.
 
+# Simulated user behavior
+- user visits `amazon.com` website
+- user fills out a search field with the product name and activates search ==>  
+==> a page with search results is displayed.
+- user looks for the product of specified color having maximum reviews count 
+- user extracts minimum product price (with applied discount - if any) from the page
+- user assigns `amazon_price` = product price
+- user visits `bestbuy.com` website
+- user chooses `United States` country
+- user fills out a search field with the product name and activates search ==>  
+==> a page with search results is displayed.
+- user looks for the product of specified color having maximum reviews count 
+- user extracts minimum product price (with applied discount - if any) from the page
+- user assigns `bestbuy_price` = product price
+
 # Prerequisites
 Install everything from the requirements.txt file by executing the command: `pip install -r requirements.txt`
 
 # How to run it
-To run test in use command in project directory:
+Use command in project directory to run test:
   - Mac/Linux users: `python3 -m pytest tests/test_shopping.py`
   - Windows users: `py -3 -m pytest tests/test_shopping.py`  
 
